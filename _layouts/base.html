@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>{{ page.title }}</title>
+    {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ site.STATIC_URL }}styles/base.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="{{ site.STATIC_URL }}styles/pygments.css" type="text/css" media="screen" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <script>
+      document.documentElement.className+=' js';
+      window.STATIC_URL = '{{ site.STATIC_URL }}';
+    </script>
+    <link href='http://fonts.googleapis.com/css?family=VT323' rel='stylesheet' type='text/css'>
+    <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', '{{ site.GOOGLE_ANALYTICS }}']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+  </head>
+  <body>
+    <div class="top-wrapper">
+      <div class="wrapper cf">
+        <header class="cf">
+          <div class="cf">
+            <h1><a href="/">Consultancy and Web Development, London UK</a></h1>
+            {% include navigation.html %}
+          </div>
+          <h2><a href="/">Made with bytes*</a></h2>
+          <span class="small-print">
+            * made with several bytes before compression. No bytes where harmed during this transmission.
+          </span>
+        </header>
+        <div class="content-wrapper cf">
+          <div class="content">
+            <div class="content-inner">
+              <article>
+                <div class="article-wrapper">
+                  {% block content %}
+                  {{ content }}
+                  {% endblock %}
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+        <!-- .content-wrapper -->
+      </div>
+    </div>
+    {% include footer.html %}
+  </body>
+</html>

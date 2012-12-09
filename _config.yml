@@ -1,0 +1,6 @@
+auto: true
+pygments: true
+permalink: /writting/:title
+
+GOOGLE_ANALYTICS: UA-26741306-1
+STATIC_URL: /assets/

@@ -1,0 +1,15 @@
+---
+layout: base
+title: Write ups - Made with bytes - Web development, London UK
+description: Write ups from Made with bytes
+published: true
+---
+<h1>Write ups.</h1>
+{% for object in site.posts limit:10%}
+<section>
+  <h1><a href="{{ object.url }}/">{{ object.title }}</a></h1>
+  <p>{{ object.author }} on {{ object.date | date_to_long_string }}</p>
+  <p>{{ object.summary }}</p>
+  <p><a href="{{ object.url }}/">Read more</a></p>
+</section>
+{% endfor %}
