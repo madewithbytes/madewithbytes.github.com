@@ -49,7 +49,6 @@
             <div class="content-inner">
               <article>
                 <div class="article-wrapper">
-                  
                   <h1>Install node.js and coffescript inside a python virtualenv</h1>
 <p>by Alfredo Aguirre on 31 December 2011.</p>
 <p>
@@ -64,64 +63,48 @@
 <p>1. Activate the virtualenv:</p>
 
 <div class="highlight"><pre><code class="bash">  <span class="nv">$ </span>workon <span class="nb">test</span>
-</code></pre>
-</div>
-
+</code></pre></div>
 
 <p>2. Move inside the virtualenv directory:</p>
 
 <div class="highlight"><pre><code class="bash">  <span class="o">(</span><span class="nb">test</span><span class="o">)</span><span class="nv">$ </span>cdvirtualenv
-</code></pre>
-</div>
-
+</code></pre></div>
 
 <p>3. Export the directory as the prefix for the installation:</p>
 
 <div class="highlight"><pre><code class="bash">  <span class="o">(</span><span class="nb">test</span><span class="o">)</span><span class="nv">$ </span><span class="nb">export </span><span class="nv">PREFIX</span><span class="o">=</span><span class="sb">`</span><span class="nb">pwd</span><span class="sb">`</span>
-</code></pre>
-</div>
-
+</code></pre></div>
 
 <p>4. Get the latest version of <a href="http://nodejs.org/">node.js</a> from <a href="http://nodejs.org/">http://nodejs.org/</a> and unpack it e.g.</p>
 
 <div class="highlight"><pre><code class="bash">  <span class="o">(</span><span class="nb">test</span><span class="o">)</span><span class="nv">$ </span>wget http://nodejs.org/dist/v0.6.6/node-v0.6.6.tar.gz
   <span class="o">(</span><span class="nb">test</span><span class="o">)</span><span class="nv">$ </span>tar xvfz node-v0.6.6.tar.gz
-</code></pre>
-</div>
-
+</code></pre></div>
 
 <p>5. Once inside the unpacked node directory:</p>
 
 <div class="highlight"><pre><code class="bash">  <span class="o">(</span><span class="nb">test</span><span class="o">)</span><span class="nv">$ </span>./configure --prefix<span class="o">=</span><span class="nv">$PREFIX</span>
   <span class="o">(</span><span class="nb">test</span><span class="o">)</span><span class="nv">$ </span>make
   <span class="o">(</span><span class="nb">test</span><span class="o">)</span><span class="nv">$ </span>make install
-</code></pre>
-</div>
-
+</code></pre></div>
 
 <p>6. Check that node.js was installed correctly:</p>
 
 <div class="highlight"><pre><code class="bash">  <span class="o">(</span><span class="nb">test</span><span class="o">)</span><span class="nv">$ </span>which node
-</code></pre>
-</div>
-
+</code></pre></div>
 
 <p>7. Fortunately npm (node package manager) is installed with node.js as well, now we can proceed with the installation of coffee-script:
 </p>
 
 <div class="highlight"><pre><code class="bash">  <span class="o">(</span><span class="nb">test</span><span class="o">)</span><span class="nv">$ </span>npm install -g coffee-script
-</code></pre>
-</div>
-
+</code></pre></div>
 
 <p>npm uses the PREFIX environment variable to determine where to install the node packages, bear this in mind in case you plan to install any other packages.</p>
 
 <p>8. Check that coffe-script was installed successfully:</p>
 
 <div class="highlight"><pre><code class="bash">  <span class="o">(</span><span class="nb">test</span><span class="o">)</span><span class="nv">$ </span>which coffee
-</code></pre>
-</div>
-
+</code></pre></div>
 
 <p>9. Play with node.js or coffee-script :)</p>
 
@@ -129,7 +112,6 @@
 
 <p>Photo credit: <a href="http://www.flickr.com/photos/jenny-pics/4520503357/">jenny-pics on flickr</a></p>
 
-                  
                 </div>
               </article>
             </div>
