@@ -567,6 +567,16 @@ a.bitbucket.sticker
     font-size: 2em;
 }
 
+.teabag
+{
+    text-align: center;
+}
+
+article h2
+{
+    margin: 1em 0 0.5em 0;
+}
+
 @media all and (max-width: 670px) {
     .wrapper {
         width: 100%;
