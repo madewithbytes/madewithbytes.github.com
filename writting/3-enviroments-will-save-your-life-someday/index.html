@@ -1,61 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8"/>
-    <title>The 3 environments that will save your life someday.</title>
-    <link rel="canonical" href="/writing/3-enviroments-will-save-your-life-someday/"/>
-    <meta name="description" content="Web applications can be complex and error prone (due the complexity). Using a three different environments such as Development, Staging and Production with meaningful tests will help to polish your application into a better product before it is released.">
-    <meta name="author" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/assets/styles/pygments.css" type="text/css" media="screen" />
-    <link rel="stylesheet" href="/assets/styles/base.css?130218" type="text/css" media="screen" />
-    <link rel="shortcut icon" href="/favicon.ico" />
-    <script>
-      document.documentElement.className+=' js';
-      window.STATIC_URL = '/assets/';
-    </script>
-    <link href='http://fonts.googleapis.com/css?family=VT323' rel='stylesheet' type='text/css'>
-    <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-    <script type="text/javascript">
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-26741306-1']);
-      _gaq.push(['_trackPageview']);
-      (function() {
-      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
-    </script>
-  </head>
-  <body>
-    <div class="top-wrapper">
-      <div class="wrapper cf">
-        <header class="cf">
-          <div class="cf">
-            <h1><a href="/">Web Development and Consultancy, London UK</a></h1>
-            <nav>
-  <a href="/">About</a>
-  <a href="/writing/">Write ups</a>
-  <a class="last" href="/work/">Work</a>
-</nav>
+---
+layout: base
+title: The 3 environments that will save your life someday.
+description: Web applications can be complex and error prone (due the complexity). Using a three different environments such as Development, Staging and Production with meaningful tests will help to polish your application into a better product before it is released.
+summary: Web applications can be complex and error prone (due the complexity). Using a three different environments such as Development, Staging and Production with meaningful tests will help to polish your application into a better product before it is released.
+author: Alfredo Aguirre
+published: true
 
-          </div>
-          <h2><a href="/">Made with bytes*</a></h2>
-          <span class="small-print">
-            * made with several bytes before compression. No bytes where harmed during this transmission.
-          </span>
-        </header>
-        <div class="content-wrapper cf">
-          <div class="content">
-            <div class="content-inner">
-              <article>
-                <div class="article-wrapper">
-                  <h1>The 3 environments that will save your life someday</h1>
+id: /writing/3-enviroments-will-save-your-life-someday/
+---
 
-<p>by Alfredo Aguirre on 17 February 2013.</p>
+<h1>The 3 environments that will save your life someday</h1>
+
+<p>by {{ page.author }} on 17 February 2013.</p>
 
 <p>
-  <img src="/assets/images/posts/penguins.jpg" title="Three lonely strays find a lost brother after a blizzard [Australasian Antarctic Expedition, 1911-1914] by By National Library of Australia Commons" alt="Three penguins find a forth one." /><br>
+  <img src="{{ site.STATIC_URL }}images/posts/penguins.jpg" title="Three lonely strays find a lost brother after a blizzard [Australasian Antarctic Expedition, 1911-1914] by By National Library of Australia Commons" alt="Three penguins find a forth one." /><br>
   Photo credit: <a href="http://www.flickr.com/photos/national_library_of_australia_commons/6173951726/">National Library of Australia Commons</a> on Flickr
 </p>
 
@@ -98,7 +57,7 @@
 </p>
 
 <p>
-  <img src="/assets/images/posts/you-broke-the-build.png" title="Breaking the build will induce this kind of feeling to your colleaguess. Don't do it. DON'T BREAK THE BUILD!!!11 . By the way cats can't spell." alt="Colleagues won't enjoy you broke the build." /><br>
+  <img src="{{ site.STATIC_URL }}images/posts/you-broke-the-build.png" title="Breaking the build will induce this kind of feeling to your colleaguess. Don't do it. DON'T BREAK THE BUILD!!!11 . By the way cats can't spell." alt="Colleagues won't enjoy you broke the build." /><br>
   Photo credit: <a href="http://www.grumpycats.com">grumpycats.com</a>
 </p>
 
@@ -167,49 +126,3 @@
 <p>
   And that's it. This is the flow I generally use for my applications, but if you use some other technique, or have some comments I would love to hear them.
 </p>
-
-                </div>
-              </article>
-            </div>
-          </div>
-        </div>
-        <!-- .content-wrapper -->
-      </div>
-    </div>
-    <div class="footer-wrapper">
-  <footer class="cf">
-    <div class="available-on">
-      <h2 id="contact">Contact.</h2>
-      <ul>
-        <li><a class="sticker external email" href="mailto:hello@madewithbyt.es">email</a></li>
-        <li><a class="sticker external twitter" href="http://twitter.com/a_alfredo">twitter</a></li>
-        <li><a class="sticker linkedin external" href="http://www.linkedin.com/in/aguirrealfredo">Linkedin</a></li>
-      </ul>
-    </div>
-    <div class="footer-extra">
-      <h2>About.</h2>
-      <p>
-        My name is Alfredo Aguirre and I am an experienced web developer. I founded and contract under Made with bytes Ltd. I love open source, python, and all things digital.
-      </p>
-      <p>
-        I am always happy to discuss new exciting projects and business opportunities.
-      </p>
-      <p>
-        Powered by tea and madeleines.
-      </p>
-        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" width="30px" height="30px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
-          <path fill="#F0F0D8" d="M43.659,42.581H14.875L5.169,53.159v16.41V100h48.363V69.569V53.34L43.659,42.581z M7.343,69.569V54.006  l8.488-9.251h26.873l8.655,9.431v15.384H7.343z"/>
-          <polygon fill="#F0F0D8" points="83.955,44.756 80.718,48.894 80.718,67.216 96.848,67.216 96.848,48.964 93.556,44.756 "/>
-          <g>
-            <path fill="#F0F0D8" d="M29.26,57.797c-3.195,0-5.796-2.601-5.796-5.796c0-3.196,2.601-5.796,5.796-5.796   c3.196,0,5.796,2.601,5.796,5.796C35.056,55.196,32.456,57.797,29.26,57.797z M29.26,48.378c-1.997,0-3.622,1.625-3.622,3.623   c0,1.997,1.625,3.622,3.622,3.622c1.998,0,3.623-1.625,3.623-3.622C32.882,50.003,31.257,48.378,29.26,48.378z"/>
-          </g>
-          <g>
-            <path fill="#F0F0D8" d="M89.008,51.186c-0.72,0-1.303-0.486-1.303-1.087c0-26.518-12.81-48.091-28.556-48.091   c-15.743,0-28.551,21.573-28.551,48.091c0,0.601-0.583,1.087-1.303,1.087c-0.719,0-1.303-0.486-1.303-1.087   c0-27.716,13.977-50.265,31.157-50.265c17.184,0,31.161,22.549,31.161,50.265C90.311,50.699,89.728,51.186,89.008,51.186z"/>
-          </g>
-        </svg>
-    </div>
-  </footer>
-</div>
-
-  </body>
-</html>

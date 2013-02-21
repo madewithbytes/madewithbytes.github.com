@@ -1,57 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8"/>
-    <title>The deployment black box, Mercurio</title>
-    <link rel="canonical" href="/writing/mercurio-the-deployment-black-box/"/>
-    <meta name="description" content="Mercurio is a set of components designed to deploy or run a test suite a message to the host and perform an action with the push of a button in a black box, while encouraging good development practices.">
-    <meta name="author" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/assets/styles/pygments.css" type="text/css" media="screen" />
-    <link rel="stylesheet" href="/assets/styles/base.css?130218" type="text/css" media="screen" />
-    <link rel="shortcut icon" href="/favicon.ico" />
-    <script>
-      document.documentElement.className+=' js';
-      window.STATIC_URL = '/assets/';
-    </script>
-    <link href='http://fonts.googleapis.com/css?family=VT323' rel='stylesheet' type='text/css'>
-    <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-    <script type="text/javascript">
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-26741306-1']);
-      _gaq.push(['_trackPageview']);
-      (function() {
-      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
-    </script>
-  </head>
-  <body>
-    <div class="top-wrapper">
-      <div class="wrapper cf">
-        <header class="cf">
-          <div class="cf">
-            <h1><a href="/">Web Development and Consultancy, London UK</a></h1>
-            <nav>
-  <a href="/">About</a>
-  <a href="/writing/">Write ups</a>
-  <a class="last" href="/work/">Work</a>
-</nav>
+---
+layout: base
+title: The deployment black box, Mercurio
+description: Mercurio is a set of components designed to deploy or run a test suite a message to the host and perform an action with the push of a button in a black box, while encouraging good development practices.
+summary: Mercurio is a set of components designed to transmit a message to the host and perform an action with the push of a button in a black box, while encouraging good development practices.
+author: Alfredo Aguirre
+published: true
 
-          </div>
-          <h2><a href="/">Made with bytes*</a></h2>
-          <span class="small-print">
-            * made with several bytes before compression. No bytes where harmed during this transmission.
-          </span>
-        </header>
-        <div class="content-wrapper cf">
-          <div class="content">
-            <div class="content-inner">
-              <article>
-                <div class="article-wrapper">
-                  <h1>The deployment black box: Mercurio</h1>
-<p>by Alfredo Aguirre on 19 February 2013.</p>
+id: /writing/mercurio-the-deployment-black-box/
+---
+
+<h1>The deployment black box: Mercurio</h1>
+<p>by {{ page.author }} on 19 February 2013.</p>
 
 <p class="highlight">
   Write tests, deploy often and iterate quickly.
@@ -68,7 +27,7 @@
 <h2 id="introducing-mercurio"><a href="#introducing-mercurio">Introducing Mercurio</a></h2>
 
 <p>
-  <a class="image-detail" href="/assets/images/posts/mercurio-large.png"><img src="/assets/images/posts/mercurio-explained.jpg" alt="Image of the mercurio black box" title="Mecurio the deployment black box."/></a>
+  <a class="image-detail" href="{{ site.STATIC_URL }}images/posts/mercurio-large.png"><img src="{{ site.STATIC_URL }}images/posts/mercurio-explained.jpg" alt="Image of the mercurio black box" title="Mecurio the deployment black box."/></a>
 </p>
 
 <p>
@@ -113,7 +72,7 @@
 </p>
 
 <p>
-  <img src="/assets/images/posts/mercurio-lcd-detail-small.jpg" alt="" />
+  <img src="{{ site.STATIC_URL }}images/posts/mercurio-lcd-detail-small.jpg" alt="" />
 </p>
 
 <p>
@@ -135,7 +94,7 @@
 </p>
 
 <p>
-  <img src="/assets/images/posts/mercurio-inside-small.jpg" alt="Internal look of the mercurio black box" title="Internal look of the black box, the arduino and breadboard are fixed with velcro to the top of the box."/>
+  <img src="{{ site.STATIC_URL }}images/posts/mercurio-inside-small.jpg" alt="Internal look of the mercurio black box" title="Internal look of the black box, the arduino and breadboard are fixed with velcro to the top of the box."/>
 </p>
 
 <p>
@@ -159,7 +118,7 @@
 </p>
 
 <p>
-  <a class="image-detail" href="https://github.com/alfredo/mercurio/blob/master/mercurio.png"><img src="/assets/images/posts/mercurio-schematics-small.png" alt="Schematics for the mercurio black box" title="These are the schematics used for creating the black box."/></a>
+  <a class="image-detail" href="https://github.com/alfredo/mercurio/blob/master/mercurio.png"><img src="{{ site.STATIC_URL }}images/posts/mercurio-schematics-small.png" alt="Schematics for the mercurio black box" title="These are the schematics used for creating the black box."/></a>
 <br>
 Image developed using <a href="http://fritzing.org/">Fritzing</a>.
 </p>
@@ -180,7 +139,7 @@ Image developed using <a href="http://fritzing.org/">Fritzing</a>.
 </p>
 
 
-<img src="/assets/images/posts/mercurio-listener.jpg" alt="screen shot" title="Before you say something, I intentionally took this picture instead of the screnshot. I know how to do those, thank you very much." />
+<img src="{{ site.STATIC_URL }}images/posts/mercurio-listener.jpg" alt="screen shot" title="Before you say something, I intentionally took this picture instead of the screnshot. I know how to do those, thank you very much." />
 
 <p>
   More detail about the listener and its installation can be found in <a href="https://github.com/alfredo/mercurio_listener">the mercurio listener github repository</a>
@@ -205,8 +164,9 @@ Image developed using <a href="http://fritzing.org/">Fritzing</a>.
   The port where the box has been connected can be determined by running the following command; this will show you the list of serial ports available.
 </p>
 
-<div class="highlight"><pre><code class="bash"><span class="nv">$ </span>python -m serial.tools.list_ports
-</code></pre></div>
+{% highlight bash %}
+$ python -m serial.tools.list_ports
+{% endhighlight %}
 
 <p>
   Under the <em>targets</em> sections the list of targets should be declared. They must match the targets available in the black box, by default: <em>test, staging and production.</em>
@@ -220,24 +180,26 @@ Image developed using <a href="http://fritzing.org/">Fritzing</a>.
   This is a sample configuration I use to test and deploy on one of my projects.
 </p>
 
-<div class="highlight"><pre><code class="ini"><span class="k">[general]</span>
-<span class="c1"># Port where the black box has been connected</span>
-<span class="c1"># Use python -m serial.tools.list_ports`` to determine it.</span>
-<span class="err">port:</span> <span class="err">/dev/tty.usbserial-A900cfep</span>
+{% highlight ini %}
+[general]
+# Port where the black box has been connected
+# Use python -m serial.tools.list_ports`` to determine it.
+port: /dev/tty.usbserial-A900cfep
 
-<span class="k">[targets]</span>
-<span class="c1"># Command to be run when this destination is targeted.</span>
-<span class="err">test</span> <span class="err">:</span> <span class="err">fab</span> <span class="err">test</span>
-<span class="err">staging:</span> <span class="err">fab</span> <span class="err">staging</span> <span class="err">deploy</span>
-<span class="na">production: fab production deploy:confirmation</span><span class="o">=</span><span class="s">False</span>
-</code></pre></div>
+[targets]
+# Command to be run when this destination is targeted.
+test : fab test
+staging: fab staging deploy
+production: fab production deploy:confirmation=False
+{% endhighlight %}
 
 <p>
   And that's it, all that needs to be done now is plug the black box to the computer and run the mercurio listener:
 </p>
 
-<div class="highlight"><pre><code class="bash"><span class="nv">$ </span>mercurio-run.py
-</code></pre></div>
+{% highlight bash %}
+$ mercurio-run.py
+{% endhighlight %}
 
 <p>
   It will give you some feedback and tell you that the box and the listener are talking to each other and you are ready to deploy, test and have fun (if you are into pressing buttons or automation, whatever floats your boat dude. I am not judging you).
@@ -300,49 +262,3 @@ Image developed using <a href="http://fritzing.org/">Fritzing</a>.
   <em>Q: Why did you choose that name?</em><br>
   A: Mercurio is spanish for <a href="http://en.wikipedia.org/wiki/Mercury_(mythology)">Mercury</a> and he was good at delivering messages.
 </p>
-
-                </div>
-              </article>
-            </div>
-          </div>
-        </div>
-        <!-- .content-wrapper -->
-      </div>
-    </div>
-    <div class="footer-wrapper">
-  <footer class="cf">
-    <div class="available-on">
-      <h2 id="contact">Contact.</h2>
-      <ul>
-        <li><a class="sticker external email" href="mailto:hello@madewithbyt.es">email</a></li>
-        <li><a class="sticker external twitter" href="http://twitter.com/a_alfredo">twitter</a></li>
-        <li><a class="sticker linkedin external" href="http://www.linkedin.com/in/aguirrealfredo">Linkedin</a></li>
-      </ul>
-    </div>
-    <div class="footer-extra">
-      <h2>About.</h2>
-      <p>
-        My name is Alfredo Aguirre and I am an experienced web developer. I founded and contract under Made with bytes Ltd. I love open source, python, and all things digital.
-      </p>
-      <p>
-        I am always happy to discuss new exciting projects and business opportunities.
-      </p>
-      <p>
-        Powered by tea and madeleines.
-      </p>
-        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" width="30px" height="30px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
-          <path fill="#F0F0D8" d="M43.659,42.581H14.875L5.169,53.159v16.41V100h48.363V69.569V53.34L43.659,42.581z M7.343,69.569V54.006  l8.488-9.251h26.873l8.655,9.431v15.384H7.343z"/>
-          <polygon fill="#F0F0D8" points="83.955,44.756 80.718,48.894 80.718,67.216 96.848,67.216 96.848,48.964 93.556,44.756 "/>
-          <g>
-            <path fill="#F0F0D8" d="M29.26,57.797c-3.195,0-5.796-2.601-5.796-5.796c0-3.196,2.601-5.796,5.796-5.796   c3.196,0,5.796,2.601,5.796,5.796C35.056,55.196,32.456,57.797,29.26,57.797z M29.26,48.378c-1.997,0-3.622,1.625-3.622,3.623   c0,1.997,1.625,3.622,3.622,3.622c1.998,0,3.623-1.625,3.623-3.622C32.882,50.003,31.257,48.378,29.26,48.378z"/>
-          </g>
-          <g>
-            <path fill="#F0F0D8" d="M89.008,51.186c-0.72,0-1.303-0.486-1.303-1.087c0-26.518-12.81-48.091-28.556-48.091   c-15.743,0-28.551,21.573-28.551,48.091c0,0.601-0.583,1.087-1.303,1.087c-0.719,0-1.303-0.486-1.303-1.087   c0-27.716,13.977-50.265,31.157-50.265c17.184,0,31.161,22.549,31.161,50.265C90.311,50.699,89.728,51.186,89.008,51.186z"/>
-          </g>
-        </svg>
-    </div>
-  </footer>
-</div>
-
-  </body>
-</html>
