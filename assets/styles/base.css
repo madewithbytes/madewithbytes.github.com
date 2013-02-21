@@ -540,6 +540,17 @@ ul.itemized li
     margin-bottom: 0px;
 }
 
+pre
+{
+    overflow: hidden;
+}
+
+.youtube
+{
+    width: 560px;
+    height: 315px;
+}
+
 @media all and (max-width: 670px) {
     .wrapper {
         width: 100%;
@@ -605,4 +616,15 @@ ul.itemized li
     .technologies {
         width: auto;
     }
+
+    pre
+    {
+        font-size: 0.6em;
+    }
+    .youtube
+    {
+        width: 215px;
+        height: 123px;
+    }
+
 }
