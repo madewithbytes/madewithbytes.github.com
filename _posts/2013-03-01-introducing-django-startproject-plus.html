@@ -1,0 +1,55 @@
+---
+layout: base
+title: Introducing django startproject plus.
+description: The template functionality on Django's startproject command is great, but a template system without support for more context variables is not very helpful with more complex setups..
+summary: The template functionality on Django's startproject command is great, but a template system without support for more context variables is not very helpful with more complex setups.
+author: Alfredo Aguirre
+published: true
+---
+
+<h1>Introducing django startproject plus</h1>
+
+<p>
+  The custom template functionality on Django's startproject command is great, but unfortunatelly it doesn't support passing extra variables to the context. This is not very helpful with more complex template setups.
+</p>
+
+<p>
+  So I created a very simple wrapper around Django's startproject command. It supersets the command by adding support for passing extra context to the template.
+</p>
+
+<p>
+  Because this command is a drop-in replacement it can be invoked with the same flags that startproject supports.
+</p>
+
+<p>
+  This issue has been brought up to the <a href="https://code.djangoproject.com/ticket/18277">django-devs mailing list</a>. But it has ended up as a documentation amend unless there is more demand for this.
+</p>
+
+<p>
+  Since I have an need for this I decided to create this simple script, which I bundled as package to make it easier to use.
+</p>
+
+
+<h2>Installation</h2>
+
+<p>This package requires Django 1.5.x installed and it is available in pypi:</p>
+
+{% highlight bash %}
+pip install django-startproject-plus
+{% endhighlight%}
+
+
+<h2>Usage</h2>
+
+<p>This is a drop in replacement for the django-admin.py startup, with an extra_context flag:</p>
+
+
+{% highlight bash %}
+django-startproject.py myproject --extra_context='{"some": "json"}'
+{% endhighlight%}
+
+
+<h2>Things to do:</h2>
+
+<p>Support django-admin.py startapp.</p>
+

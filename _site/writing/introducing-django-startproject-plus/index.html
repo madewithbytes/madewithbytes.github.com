@@ -2,9 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="utf-8"/>
-    <title>Write ups - Made with bytes - Web development, London UK</title>
-    <link rel="canonical" href="/writing/"/>
-    <meta name="description" content="Write ups from Made with bytes">
+    <title>Introducing django startproject plus.</title>
+    <link rel="canonical" href="/writing/introducing-django-startproject-plus"/>
+    <meta name="description" content="The template functionality on Django's startproject command is great, but a template system without support for more context variables is not very helpful with more complex setups..">
     <meta name="author" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/assets/styles/pygments.css" type="text/css" media="screen" />
@@ -50,42 +50,49 @@
             <div class="content-inner">
               <article>
                 <div class="article-wrapper">
-                  <h1>Write ups.</h1>
+                  <h1>Introducing django startproject plus</h1>
 
-<section>
-  <h1><a href="/writing/introducing-django-startproject-plus/">Introducing django startproject plus.</a></h1>
-  <p>Alfredo Aguirre on 01 March 2013</p>
-  <p>The template functionality on Django's startproject command is great, but a template system without support for more context variables is not very helpful with more complex setups.</p>
-  <p><a href="/writing/introducing-django-startproject-plus/">Read more</a></p>
-</section>
+<p>
+  The custom template functionality on Django's startproject command is great, but unfortunatelly it doesn't support passing extra variables to the context. This is not very helpful with more complex template setups.
+</p>
 
-<section>
-  <h1><a href="/writing/mercurio-the-deployment-black-box/">The deployment black box, Mercurio</a></h1>
-  <p>Alfredo Aguirre on 19 February 2013</p>
-  <p>Mercurio is a set of components designed to transmit a message to the host and perform an action with the push of a button in a black box, while encouraging good development practices.</p>
-  <p><a href="/writing/mercurio-the-deployment-black-box/">Read more</a></p>
-</section>
+<p>
+  So I created a very simple wrapper around Django's startproject command. It supersets the command by adding support for passing extra context to the template.
+</p>
 
-<section>
-  <h1><a href="/writing/3-enviroments-will-save-your-life-someday/">The 3 environments that will save your life someday.</a></h1>
-  <p>Alfredo Aguirre on 17 February 2013</p>
-  <p>Web applications can be complex and error prone (due the complexity). Using a three different environments such as Development, Staging and Production with meaningful tests will help to polish your application into a better product before it is released.</p>
-  <p><a href="/writing/3-enviroments-will-save-your-life-someday/">Read more</a></p>
-</section>
+<p>
+  Because this command is a drop-in replacement it can be invoked with the same flags that startproject supports.
+</p>
 
-<section>
-  <h1><a href="/writing/install-nodejs-inside-a-virtualenv/">Install node.js and coffescript inside a python virtualenv</a></h1>
-  <p>Alfredo Aguirre on 31 December 2011</p>
-  <p>If you want to use coffee-script or node.js into a project using python virtual environments without having to fiddle with your entire system, here is a quick guide on how to do it.</p>
-  <p><a href="/writing/install-nodejs-inside-a-virtualenv/">Read more</a></p>
-</section>
+<p>
+  This issue has been brought up to the <a href="https://code.djangoproject.com/ticket/18277">django-devs mailing list</a>. But it has ended up as a documentation amend unless there is more demand for this.
+</p>
 
-<section>
-  <h1><a href="/writing/the-importance-of-being-a-lazy-developer/">The importance of being a lazy developer</a></h1>
-  <p>Alfredo Aguirre on 22 July 2011</p>
-  <p>Working with creative agences quick turn arounds and time sensitive deadlines are always there. To deliver products from the technical side of things there are tasks that are performed once or several times. It is always useful to have stack of tools that help to "hit the ground running"</p>
-  <p><a href="/writing/the-importance-of-being-a-lazy-developer/">Read more</a></p>
-</section>
+<p>
+  Since I have an need for this I decided to create this simple script, which I bundled as package to make it easier to use.
+</p>
+
+
+<h2>Installation</h2>
+
+<p>This package requires Django 1.5.x installed and it is available in pypi:</p>
+
+<div class="highlight"><pre><code class="bash">pip install django-startproject-plus
+</code></pre></div>
+
+
+<h2>Usage</h2>
+
+<p>This is a drop in replacement for the django-admin.py startup, with an extra_context flag:</p>
+
+
+<div class="highlight"><pre><code class="bash">django-startproject.py myproject --extra_context<span class="o">=</span><span class="s1">&#39;{&quot;some&quot;: &quot;json&quot;}&#39;</span>
+</code></pre></div>
+
+
+<h2>Things to do:</h2>
+
+<p>Support django-admin.py startapp.</p>
 
 
                 </div>
